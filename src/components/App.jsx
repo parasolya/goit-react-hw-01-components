@@ -17,61 +17,22 @@ export const App = () => {
         tag={user.tag}
         location={user.location}
         avatar={user.avatar}
-        followers={user.stats.followers}
-        views={user.stats.views}
-        likes={user.stats.likes}
+        stats={user.stats}
       />
 
-      <section className={css.statistics}>
-        <h2 className={css.title}>{data.title ? 'Upload stats' : ''}</h2>
-        <ul className={css.statList}>
-          {data.map(el => (
-            <Statistics
-              key={el.id}
-              label={el.label}
-              percentage={el.percentage}
-            />
-          ))}
-        </ul>
-      </section>
+      <Statistics title="Upload stats" stats={data} />
+      <Statistics stats={data} />
 
       <FriendList items={friends} />
 
-      <div>
-        <table className={css.tableTransactionsHistory}>
-          <thead>
-            <tr className={css.tableTransactions}>
-              <th>Type</th>
-              <th>Amount</th>
-              <th>Currency</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            {transactions.map(item => (
-              <TransactionHistory
-                id={item.id}
-                type={item.type}
-                amount={item.amount}
-                currency={item.currency}
-              />
-            ))}
-          </tbody>
-        </table>
-      </div>
+      <TransactionHistory items={transactions} />
     </div>
   );
 };
 App.prototype = {
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      key: PropTypes.string.isRequired,
-    })
-  ),
-  transactions: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-    })
-  ),
+  user: PropTypes.array.isRequired,
+  data: PropTypes.array.isRequired,
+  transactions: PropTypes.array.isRequired,
+  friends: PropTypes.array.isRequired,
   title: PropTypes.string,
 };

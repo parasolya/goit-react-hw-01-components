@@ -1,0 +1,15 @@
+.tableTransactionsHistory {
+    margin-top: 40px;
+    text-align: center;
+    /* border-collapse: collapse; */
+    width: 500px;
+    border: 1px solid hsl(0, 0%, 27%);
+    box-shadow: 10px 5px 5px rgb(154, 148, 148);
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: #dfdede;
+  }
+  .tableTransactions {
+    height: 30px;
+  }

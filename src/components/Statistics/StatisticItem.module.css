@@ -1,0 +1,8 @@
+.item {
+    flex: auto;
+    display: flex;
+    flex-direction: column;     
+    align-items: center; 
+    border: 1px solid hsl(0, 0%, 27%);
+    border-top: 1.5px solid hsl(0, 0%, 27%);
+  }

@@ -7,8 +7,8 @@ function FriendListItem({ isOnline, avatar, name }) {
     <>
       <li className={css.item}>
         <span className={clsx(css[isOnline])}></span>
-        <img class="avatar" src={avatar} alt="User avatar" width="48" />
-        <p class="name">{name}</p>
+        <img src={avatar} alt="User avatar" width="48" />
+        <p >{name}</p>
       </li>
     </>
   );

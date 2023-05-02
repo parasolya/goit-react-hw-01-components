@@ -14,15 +14,15 @@ function Profile(props) {
       <ul className={css.stats}>
         <li className={css.stats__item}>
           <span className={css.label}>Followers</span>
-          <span className={css.quantity}>{props.followers}</span>
+          <span className={css.quantity}>{props.stats.followers}</span>
         </li>
         <li className={css.stats__item}>
           <span className={css.label}>Views</span>
-          <span className={css.quantity}>{props.views}</span>
+          <span className={css.quantity}>{props.stats.views}</span>
         </li>
         <li className={css.stats__item}>
           <span className={css.label}>Likes</span>
-          <span className={css.quantity}>{props.likes}</span>
+          <span className={css.quantity}>{props.stats.likes}</span>
         </li>
       </ul>
     </div>

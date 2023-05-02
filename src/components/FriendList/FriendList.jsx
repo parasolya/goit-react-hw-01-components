@@ -7,7 +7,7 @@ function FriendList({ items }) {
     <ul className={css.friendList}>
       {items.map(item => (
         <FriendListItem
-          id={item.id}
+          key={item.id}
           avatar={item.avatar}
           name={item.name}
           isOnline={item.isOnline}
@@ -20,7 +20,7 @@ function FriendList({ items }) {
 FriendList.prototype = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      key: PropTypes.number.isRequired,
       avatar: PropTypes.symbol.isRequired,
       name: PropTypes.string.isRequired,
       isOnline: PropTypes.bool.isRequired,
